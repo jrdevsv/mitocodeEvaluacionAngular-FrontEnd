@@ -1,0 +1,14 @@
+<div mat-dialog-content>
+
+    <label> USUARIO: </label>
+    <li>{{decodedToken.user_name}}</li>
+    
+    <mat-divider></mat-divider>
+    <label>ROLES: </label>
+    <div *ngFor="let data of decodedToken.authorities">
+        <li>
+            <span aria-hidden="true">{{data}}</span>
+            <mat-divider></mat-divider>
+        </li>
+    </div>
+</div>
